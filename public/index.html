@@ -284,6 +284,18 @@
             onkeypress="if(event.key==='Enter') joinMultiplayerGame()"
           />
           <div class="space-y-2">
+            <label class="text-sm text-gray-300">Join Game:</label>
+            <input
+              type="text"
+              id="roomCode"
+              class="nickname-input"
+              placeholder="Enter room code (optional)"
+              maxlength="6"
+              style="text-transform: uppercase;"
+            />
+            <p class="text-xs text-gray-400">Leave empty to create a new game or join any available game</p>
+          </div>
+          <div class="space-y-2">
             <label class="text-sm text-gray-300">Time Control:</label>
             <select id="multiplayerTimeLimit" class="nickname-input">
               <option value="1min">1 minute</option>
@@ -354,7 +366,7 @@
     <!-- Game Container -->
     <div id="gameContainer" class="hidden">
       <!-- Player 1 (Black) Info -->
-      <div class="player-info mb-6">
+      <div class="player-info mb-6" id="topPlayerInfo">
         <div class="player-avatar">♛</div>
         <div class="flex-1">
           <div class="font-bold text-xl flex items-center" id="blackPlayerName">
@@ -363,14 +375,14 @@
           </div>
           <div class="text-sm text-gray-300 mt-1">Black Pieces</div>
         </div>
-        <div class="timer inactive" id="blackTimer">05:00</div>
+        <div class="timer inactive" id="topTimer">05:00</div>
       </div>
 
       <!-- Chessboard -->
       <div class="chessboard" id="board"></div>
 
       <!-- Player 2 (White) Info -->
-      <div class="player-info mt-6">
+      <div class="player-info mt-6" id="bottomPlayerInfo">
         <div class="player-avatar">♔</div>
         <div class="flex-1">
           <div class="font-bold text-xl flex items-center" id="whitePlayerName">
@@ -379,13 +391,14 @@
           </div>
           <div class="text-sm text-gray-300 mt-1">White Pieces</div>
         </div>
-        <div class="timer inactive" id="whiteTimer">05:00</div>
+        <div class="timer inactive" id="bottomTimer">05:00</div>
       </div>
 
       <!-- Game Status -->
       <div class="text-center mt-6">
         <div id="currentTurn" class="text-xl font-semibold text-gray-100 mb-2"></div>
         <div id="roleDisplay" class="text-sm text-gray-400"></div>
+        <div id="roomCodeDisplay" class="text-sm text-gray-300 mt-2 font-mono"></div>
         <div id="gameStatus" class="text-sm text-gray-500 mt-2"></div>
       </div>
     </div>
