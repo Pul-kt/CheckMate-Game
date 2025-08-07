@@ -98,7 +98,7 @@
     .timer.active {
       background: linear-gradient(135deg, #48bb78, #38a169);
       color: white;
-      border-color: #68d391;
+      border-color: #6ed395;
       animation: pulse 1.5s infinite;
       box-shadow: 0 0 20px rgba(72, 187, 120, 0.5);
     }
@@ -144,7 +144,7 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(135deg, #000000, #000000);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -202,7 +202,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(135deg, #667eea, #000000);
       color: white;
       border: none;
       padding: 15px 30px;
@@ -211,7 +211,7 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      box-shadow: 0 4px 15px rgba(44, 48, 66, 0.3);
     }
 
     .btn-primary:hover {
@@ -237,7 +237,7 @@
     }
 
     .game-title {
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(135deg, #5f72c9, #ffffff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -252,7 +252,7 @@
   <div class="flex flex-col items-center gap-8">
     <!-- Login Section -->
     <div id="loginSection" class="text-center">
-      <h1 class="game-title mb-8">CheckMate</h1>
+      <h1 class="game-title mb-8"> Welcome To CheckMate</h1>
       <div class="bg-gray-800 p-8 rounded-2xl border-2 border-gray-600 shadow-xl">
         <h2 class="text-2xl font-bold mb-6 text-gray-100">Choose Game Mode</h2>
         <div class="space-y-4">
@@ -268,6 +268,8 @@
         </div>
       </div>
     </div>
+
+    <h5 class="game-title mb-8"></h5>
 
     <!-- Multiplayer Setup -->
     <div id="multiplayerSetup" class="text-center hidden">
@@ -416,6 +418,11 @@
       </div>
     </div>
   </div>
+
+  <!-- Credit - Fixed at bottom -->
+<div class="fixed bottom-5 left-1/2 transform -translate-x-1/2">
+  <p class="text-xs text-gray-500">Made by Pulkit Jindal</p>
+</div>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
